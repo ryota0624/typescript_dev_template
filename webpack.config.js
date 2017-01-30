@@ -34,7 +34,6 @@ module.exports = {
       ".js", ".ts", ".tsx"
     ]
   },
-  watch: true,
   devServer: {
     contentBase: [path.join(__dirname, 'public')],
     watchContentBase: true,
