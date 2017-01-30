@@ -1,0 +1,41 @@
+{
+  "name": "ts-project-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc; ava",
+    "webpack": "webpack --config webpack.config.js",
+    "dev-server": " open http://localhost:9000/webpack-dev-server/; webpack-dev-server --config webpack.config.js",
+    "crean": "rm -rf ./src/**/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^15.0.4",
+    "@types/react-dom": "^0.14.21",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "ts-loader": "^2.0.0",
+    "typescript": "^2.1.5",
+    "webpack": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^2.7.2",
+    "ava": "^0.17.0",
+    "enzyme": "^2.7.1",
+    "tslint-loader": "^3.3.0"
+  },
+  "ava": {
+    "files": [
+      "js/**/*.spec.js"
+    ],
+    "source": [
+      "js/**/*.{js,jsx}"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "tap": true,
+    "powerAssert": false
+  }
+}
