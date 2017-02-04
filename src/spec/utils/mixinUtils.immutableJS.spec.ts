@@ -39,7 +39,7 @@ test('mixin ImRecord subClass', (t) => {
 
     intro: () => string;
 
-    @override() attack() {
+    @override attack() {
       return 1000;
     }
 

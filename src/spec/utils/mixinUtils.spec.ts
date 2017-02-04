@@ -30,7 +30,7 @@ test('mixin With override', (t) => {
 
   @mixin(A)
   class B implements A {
-    @override() hello() {
+    @override hello() {
       return A.prototype.hello.apply(this) + ov;
     };
 
