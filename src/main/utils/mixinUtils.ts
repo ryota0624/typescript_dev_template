@@ -44,14 +44,14 @@ export function override(target: any, propertyKey: string, descriptor: PropertyD
 
 export function With<INJ extends Constructable>(INJ: INJ) {
   return <BC extends Constructable>(Base: BC) => {
-    class Mixed extends Base {
+    class Mixed {
     
     };
     Object.getOwnPropertyNames(INJ.prototype).forEach(prop => {
       if (prop === "constructor") {
           return;
       }
-      delete Mixed.prototype[prop];
+      // delete Mixed.prototype[prop];
       Object.defineProperty(Mixed.prototype, prop, {
         get: () => {
           return INJ.prototype[prop]  ;
@@ -94,28 +94,28 @@ class A implements Time {
 
 const a = new A("");
 
-const TimeA = With(Time)(A);
-const timeA = new TimeA("");
-console.log(timeA.stamp);
-console.log(timeA.echo());
+// const TimeA = With(Time)(A);
+// const timeA = new TimeA("");
+// console.log(timeA.stamp);
+// console.log(timeA.echo());
 
-export function WithMulti<INJ extends Constructable>(INJ: INJ) {
-  return <BC extends Constructable>(Base: BC) => {
-    class Mixed extends Base {
+// export function WithMulti<INJ extends Constructable>(INJ: INJ) {
+//   return <BC extends Constructable>(Base: BC) => {
+//     class Mixed extends Base {
     
-    };
-    Object.getOwnPropertyNames(INJ.prototype).forEach(prop => {
-      if (prop === "constructor") {
-          return;
-      }
-      delete Mixed.prototype[prop];
-      Object.defineProperty(Mixed.prototype, prop, {
-        get: () => {
-          return INJ.prototype[prop]  ;
-        },
-      });
+//     };
+//     Object.getOwnPropertyNames(INJ.prototype).forEach(prop => {
+//       if (prop === "constructor") {
+//           return;
+//       }
+//       delete Mixed.prototype[prop];
+//       Object.defineProperty(Mixed.prototype, prop, {
+//         get: () => {
+//           return INJ.prototype[prop]  ;
+//         },
+//       });
 
-    });
-    return Mixed;
-    }
-}
+//     });
+//     return Mixed;
+//     }
+// }

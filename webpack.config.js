@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require("webpack");
+
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src', 'main', 'app.tsx')
@@ -28,7 +30,8 @@ module.exports = {
       }
     ]
   },
-  plugins: [],
+  plugins: [
+  ],
   resolve: {
     extensions: [
       ".js", ".ts", ".tsx"

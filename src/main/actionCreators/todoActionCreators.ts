@@ -2,13 +2,15 @@ import * as Flux from "flux";
 import ActionConstants from "../constants/ActionConstants";
 import Todo from "../models/Todo";
 import { ActionType } from "../constants/types/Action";
-import Dispather, {AppDispatcher, injectDispatcher} from "../flux/dispatcher";
+import {AppDispatcher} from "../flux/dispatcher";
 import { Constructable } from "../utils/mixinUtils";
 import { sampleTodosData } from "../data";
 import * as React from "react";
+import { injectable, inject } from "inversify";
 
+@injectable()
 export class TodoActionCreator {
-  dispatcher: AppDispatcher;
+  @inject(AppDispatcher) dispatcher: AppDispatcher;
   list() {
     setTimeout(() => 
     this.dispatcher.dispatch({
@@ -31,15 +33,3 @@ export class TodoActionCreator {
     });
   }
 }
-
-const InjectedClass = injectDispatcher(TodoActionCreator);
-const singleton = new InjectedClass();
-
-export type TodoActionCreatorType = new (...args: any[]) => object & { todoActionCreator: TodoActionCreator};
-
-export function injectTodoActionCreator(target: React.ComponentClass<any>) {
-  return class extends target {
-    todoActionCreator: TodoActionCreator = singleton;
-  }
-}
-

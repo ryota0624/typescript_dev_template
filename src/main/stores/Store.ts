@@ -1,6 +1,9 @@
-import {EventEmitter} from "eventemitter3";
+import { EventEmitter } from "eventemitter3";
+import { injectable } from "inversify";
 
 const changeEvent = "_change_";
+injectable()(EventEmitter);
+@injectable()
 export abstract class Store extends EventEmitter {
   addChangeListener(fn: () => void) {
     this.addListener(changeEvent, fn);

@@ -1,10 +1,10 @@
 import { Store } from "./Store";
 import * as I from "immutable";
 import Todo from "../models/Todo";
-import Dispatcher, { AppDispatcher, injectDispatcher } from "../flux/dispatcher";
+import { AppDispatcher } from "../flux/dispatcher";
 import ActionTypes from "../constants/ActionConstants";
-import { Constructable } from "../utils/mixinUtils";
 import * as React from "react";
+import {injectable, inject} from "inversify";
 
 type TodoStoreState = I.OrderedMap<number, Todo>;
 type TodoStoreStateType = TodoStoreState | null;
@@ -17,14 +17,17 @@ function storeTodoStore(state: TodoStoreStateType, todoList: Todo[]): TodoStoreS
   return I.OrderedMap<number, Todo>(todoList.map(todo => [todo.id, todo]));
 }
 
-export class TodoStore extends Store {
-  dispatcher: AppDispatcher;
-  constructor(private todos: TodoStoreStateType) {
-    super();
-  }
+function deleteTodoStore(state: TodoStoreState, id: number): TodoStoreState {
+  return state.delete(id);
+}
 
-  run() {
-    this.dispatcher.register(payload => {
+@injectable()
+export class TodoStore extends Store {
+  private todos: TodoStoreStateType
+  constructor(
+    @inject(AppDispatcher) dispatcher: AppDispatcher) {
+    super();
+    dispatcher.register(payload => {
       switch (payload.actionType) {
         case ActionTypes.ADD_TODO:
           if (this.todos) {
@@ -36,6 +39,10 @@ export class TodoStore extends Store {
           this.todos = storeTodoStore(this.todos, payload.todos);
           this.emitChange();
           break;
+        case ActionTypes.DELETE_TODO:
+          this.todos = deleteTodoStore(this.todos!, payload.id);
+          this.emitChange();
+          break;  
       }
     });
   }
@@ -59,18 +66,4 @@ export class TodoStore extends Store {
       return null;
     }
   }
-}
-
-let InjectedTodoStore = injectDispatcher(TodoStore);
-export const singleton = new InjectedTodoStore(null);
-singleton.run();
-
-class todoStoreComponent {
-  todoStore: TodoStore
-}
-
-export function injectTodoStore(target: (typeof React.Component) ) {
-  return class extends target<any, any> {
-    todoStore = singleton;
-  };
 }
