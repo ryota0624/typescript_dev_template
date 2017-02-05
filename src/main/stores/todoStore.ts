@@ -1,8 +1,10 @@
 import { Store } from "./Store";
 import * as I from "immutable";
 import Todo from "../models/Todo";
-import Dispatcher, { AppDispatcher } from "../flux/dispatcher";
+import Dispatcher, { AppDispatcher, injectDispatcher } from "../flux/dispatcher";
 import ActionTypes from "../constants/ActionConstants";
+import { Constructable } from "../utils/mixinUtils";
+import * as React from "react";
 
 type TodoStoreState = I.OrderedMap<number, Todo>;
 type TodoStoreStateType = TodoStoreState | null;
@@ -16,9 +18,13 @@ function storeTodoStore(state: TodoStoreStateType, todoList: Todo[]): TodoStoreS
 }
 
 export class TodoStore extends Store {
-  constructor(private todos: TodoStoreStateType, dispatcher: AppDispatcher) {
+  dispatcher: AppDispatcher;
+  constructor(private todos: TodoStoreStateType) {
     super();
-    dispatcher.register(payload => {
+  }
+
+  run() {
+    this.dispatcher.register(payload => {
       switch (payload.actionType) {
         case ActionTypes.ADD_TODO:
           if (this.todos) {
@@ -55,8 +61,16 @@ export class TodoStore extends Store {
   }
 }
 
-export type TodoStoreType = typeof TodoStore;
+let InjectedTodoStore = injectDispatcher(TodoStore);
+export const singleton = new InjectedTodoStore(null);
+singleton.run();
 
-let singleton: TodoStore = new TodoStore(null, Dispatcher);
+class todoStoreComponent {
+  todoStore: TodoStore
+}
 
-export default singleton;
+export function injectTodoStore(target: (typeof React.Component) ) {
+  return class extends target<any, any> {
+    todoStore = singleton;
+  };
+}

@@ -77,6 +77,7 @@ class Time {
   }
 }
 
+
 class A implements Time {
   @inject
   get stamp(): Date {
@@ -97,3 +98,24 @@ const TimeA = With(Time)(A);
 const timeA = new TimeA("");
 console.log(timeA.stamp);
 console.log(timeA.echo());
+
+export function WithMulti<INJ extends Constructable>(INJ: INJ) {
+  return <BC extends Constructable>(Base: BC) => {
+    class Mixed extends Base {
+    
+    };
+    Object.getOwnPropertyNames(INJ.prototype).forEach(prop => {
+      if (prop === "constructor") {
+          return;
+      }
+      delete Mixed.prototype[prop];
+      Object.defineProperty(Mixed.prototype, prop, {
+        get: () => {
+          return INJ.prototype[prop]  ;
+        },
+      });
+
+    });
+    return Mixed;
+    }
+}

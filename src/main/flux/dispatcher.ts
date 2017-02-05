@@ -1,5 +1,6 @@
 import { Dispatcher } from "flux";
 import { ActionType } from "../constants/types/Action";
+import { Constructable } from "../utils/mixinUtils";
 
 export class AppDispatcher extends Dispatcher<ActionType> {
   dispatch(payload: ActionType) {
@@ -8,4 +9,11 @@ export class AppDispatcher extends Dispatcher<ActionType> {
   }
 }
 
-export default new AppDispatcher();
+const singleton = new AppDispatcher();
+export function injectDispatcher<Target extends Constructable>(base: Target) {
+  return class extends base {
+    dispatcher: AppDispatcher = singleton;
+  };
+}
+
+export default singleton;

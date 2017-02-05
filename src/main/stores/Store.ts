@@ -3,7 +3,7 @@ import {EventEmitter} from "eventemitter3";
 const changeEvent = "_change_";
 export abstract class Store extends EventEmitter {
   addChangeListener(fn: () => void) {
-    this.emit(changeEvent);
+    this.addListener(changeEvent, fn);
   }
   // リソースがapi等通じて読み込まれたことを返す
   abstract isLoaded(): boolean;
