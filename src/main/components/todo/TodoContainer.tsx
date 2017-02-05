@@ -7,7 +7,7 @@ import { TodoActionCreator } from "../../actionCreators/todoActionCreators";
 import { TodoStore } from "../../stores/todoStore";
 import { inject, injectable } from "inversify";
 
-import { container } from "../../../inversify.config";
+import { container } from "inversify.config";
 
 interface TodoContainerState {
 }

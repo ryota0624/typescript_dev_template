@@ -31,6 +31,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      "inversify.config": ""
+    })
   ],
   resolve: {
     extensions: [
