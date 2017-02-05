@@ -1,8 +1,8 @@
 import * as ReactDOM from "react-dom";
 import * as React from "react";
-import Hello from "./component/Hello";
+import App from "./component/appRoute";
 
 const app = document.getElementById("app");
 if (app !== null) {
-  ReactDOM.render(<Hello str={"Hello World"} />, app);
+  ReactDOM.render(<App />, app);
 }

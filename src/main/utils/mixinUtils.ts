@@ -31,8 +31,8 @@ export function mixin(...bases: any[]) {
           (target as any).prototype[name] = (base as any).prototype[name];
         }
       });
-    })
-
+    });
+    return target;
   }
 }
 

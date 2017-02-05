@@ -4,28 +4,38 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc; ava",
+    "test": "tsc ; ava",
     "webpack": "webpack --config webpack.config.js",
-    "dev-server": " open http://localhost:9000/webpack-dev-server/; webpack-dev-server --config webpack.config.js",
+    "dev-server": "webpack-dev-server --config webpack.config.js",
     "crean": "rm -rf ./src/**/*.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/eventemitter3": "^1.2.0",
+    "@types/flux": "^3.0.1",
     "@types/react": "^15.0.4",
     "@types/react-dom": "^0.14.21",
+    "@types/react-router": "^3.0.0",
+    "eventemitter3": "^2.0.2",
+    "flux": "^3.1.2",
     "immutable": "^3.8.1",
+    "keymirror": "^0.1.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-router": "^3.0.2",
     "ts-loader": "^2.0.0",
+    "tslint": "^4.4.2",
     "typescript": "^2.1.5",
     "webpack": "^2.2.0"
   },
   "devDependencies": {
     "@types/enzyme": "^2.7.2",
-    "ava": "^0.17.0",
+    "ava": "^0.18.1",
     "enzyme": "^2.7.1",
-    "tslint-loader": "^3.3.0"
+    "tap-nyan": "^1.1.0",
+    "tslint-loader": "^3.3.0",
+    "webpack-dev-server": "^2.3.0"
   },
   "ava": {
     "files": [
@@ -36,7 +46,7 @@
     ],
     "concurrency": 5,
     "failFast": true,
-    "tap": true,
+    "tap": false,
     "powerAssert": false
   }
 }

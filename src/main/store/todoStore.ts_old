@@ -1,0 +1,66 @@
+import { Store } from "./Store";
+import * as I from "immutable";
+import Todo from "../models/Todo";
+import Dispatcher, { AppDispatcher } from "../flux/dispatcher";
+import ActionTypes from "../constants/ActionConstants";
+
+type TodoStoreStateType = I.OrderedMap<number, Todo> | null;
+
+let todos: TodoStoreStateType = null;
+
+export class TodoStore extends Store {
+  constructor() {
+    super();
+  }
+
+  isLoaded() {
+    return true;
+  }
+
+  isEmpty() {
+    if (todos !== null) {
+      return todos.isEmpty();
+    } else {
+      return false;
+    }
+  }
+
+  getAll(): I.List<Todo> | null {
+    if (todos) {
+      return todos.toList();
+    } else {
+      return null;
+    }
+  }
+}
+
+export type TodoStoreType = typeof TodoStore;
+
+function addTodoStore(todo: Todo) {
+  if (todos === null) {
+    return null;
+  } else {
+    todos = todos.set(todo.id, todo);
+  }
+}
+
+function storeTodoStore(todoList: Todo[]) {
+  todos = (I.OrderedMap<number, Todo>(todoList.map(todo => [todo.id, todo])));
+}
+
+let singleton: TodoStore = new TodoStore();
+
+Dispatcher.register(payload => {
+  switch (payload.actionType) {
+    case ActionTypes.ADD_TODO:
+      addTodoStore(payload.todo)
+      singleton.emitChange();
+      break;
+    case ActionTypes.LIST_TODO:
+       storeTodoStore(payload.todos);
+      singleton.emitChange();
+      break;
+  }
+});
+
+export default singleton;
