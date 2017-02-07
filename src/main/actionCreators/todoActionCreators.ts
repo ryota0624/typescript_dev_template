@@ -1,7 +1,7 @@
 import * as Flux from "flux";
 import ActionConstants from "../constants/ActionConstants";
 import Todo from "../models/Todo";
-import { ActionType } from "../constants/types/Action";
+import { ActionType } from "../types/Action";
 import {AppDispatcher} from "../flux/dispatcher";
 import { Constructable } from "../utils/mixinUtils";
 import { sampleTodosData } from "../data";

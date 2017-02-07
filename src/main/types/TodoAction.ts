@@ -1,5 +1,5 @@
-import actionTypes, {Action} from "../ActionConstants";
-import Todo from "../../models/Todo";
+import actionTypes, {Action} from "../constants/ActionConstants";
+import Todo from "../models/Todo";
 
 export interface TodoListAction extends Action<typeof actionTypes.LIST_TODO> {
   todos: Todo[];

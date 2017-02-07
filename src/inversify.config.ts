@@ -11,5 +11,4 @@ parentContainer.bind(TodoStore).toSelf();
 parentContainer.bind(TodoActionCreator).toSelf();
 
 export const container = parentContainer.createChild();
-
 export const { lazyInject } = getDecorator(container);

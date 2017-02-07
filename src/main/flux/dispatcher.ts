@@ -1,5 +1,5 @@
 import { Dispatcher } from "flux";
-import { ActionType } from "../constants/types/Action";
+import { ActionType } from "../types/Action";
 import { Constructable } from "../utils/mixinUtils";
 import { injectable } from "inversify";
 

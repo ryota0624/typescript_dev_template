@@ -16,6 +16,6 @@ const actionTypes = keymirror({
 
 export default actionTypes;
 
-export interface Action<T> {
+export interface Action<T extends string> {
   actionType: T;
 }
