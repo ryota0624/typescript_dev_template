@@ -6,18 +6,18 @@ import { Link } from "react-router";
 import { TodoActionCreator } from "../../actionCreators/todoActionCreators";
 import { TodoStore } from "../../stores/todoStore";
 import { inject, injectable } from "inversify";
-
-import { container } from "inversify.config";
+import { lazyInject } from "../../../inversify.config";
 
 interface TodoContainerState {
+
 }
 
 interface TodoContainerProps {
 }
 
 export default class TodoContainer extends React.Component<TodoContainerProps, TodoContainerState> {
-  todoActionCreator: TodoActionCreator = container.get(TodoActionCreator);
-  todoStore: TodoStore = container.get(TodoStore);
+  @lazyInject(TodoActionCreator) todoActionCreator: TodoActionCreator;
+  @lazyInject(TodoStore) todoStore: TodoStore;
   constructor(props: TodoContainerProps) {
     super(props);
     this.deleteTodo = this.deleteTodo.bind(this);

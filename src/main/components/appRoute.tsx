@@ -1,6 +1,5 @@
 import { Router, hashHistory, IndexRoute, Route } from "react-router";
 import * as React from "react";
-
 import Top from "./Top";
 import TodoPage from "./todo/TodoContainer";
 

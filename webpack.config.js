@@ -31,14 +31,14 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.DefinePlugin({
-      "inversify.config": ""
-    })
   ],
   resolve: {
     extensions: [
       ".js", ".ts", ".tsx"
-    ]
+    ],
+    alias: {
+      "inversify.conf": path.resolve(__dirname, "src/main/inversify")
+    },
   },
   devServer: {
     contentBase: [path.join(__dirname, 'public')],

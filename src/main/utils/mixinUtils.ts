@@ -2,7 +2,7 @@ export class OverrideFunc {
   constructor(public name: string, public value: any) {}
 }
 
-export type Constructable = new (...args: any[]) => object;
+export type Constructable = new (...args: any[]) => any;
 
 export function mixin<T>(base: T): (target: typeof base) => void
 
