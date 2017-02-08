@@ -24,7 +24,7 @@ function deleteTodoStore(state: TodoStoreState, id: number): TodoStoreState {
 
 @injectable()
 export class TodoStore extends Store {
-  private todos: TodoStoreStateType
+  private todos: TodoStoreStateType;
   constructor(
     @inject(AppDispatcher) dispatcher: AppDispatcher) {
     super();

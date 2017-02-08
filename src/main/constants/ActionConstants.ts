@@ -1,4 +1,4 @@
-function keymirror<T>(obj: T): { [P in keyof T]: P };
+function keymirror<T>(obj: T): Readonly <{ [P in keyof T]: P }>;
 function keymirror(obj: any) {
   let keys: any = {};
   Object.keys(obj).forEach(key => {
@@ -13,6 +13,7 @@ const actionTypes = keymirror({
   LIST_TODO: null,
   DELETE_TODO: null,
   ADD_HUMAN: null,
+  LIST_HUMAN: null
 });
 
 export default actionTypes;

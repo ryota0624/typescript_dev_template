@@ -12,7 +12,7 @@ import { injectable, inject } from "inversify";
 export class TodoActionCreator {
   @inject(AppDispatcher) dispatcher: AppDispatcher;
   list() {
-    setTimeout(() => 
+    setTimeout(() =>
     this.dispatcher.dispatch({
       actionType: ActionConstants.LIST_TODO,
       todos: sampleTodosData.toArray()

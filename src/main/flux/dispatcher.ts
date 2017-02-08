@@ -10,4 +10,8 @@ export class AppDispatcher extends Dispatcher<ActionType> {
     super.dispatch(payload);
     console.log(payload);
   }
+
+  register(cb: (palyload: Readonly<ActionType>) => void) {
+    return super.register(cb);
+  }
 }
