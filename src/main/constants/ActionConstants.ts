@@ -12,6 +12,7 @@ const actionTypes = keymirror({
   ADD_TODO: null,
   LIST_TODO: null,
   DELETE_TODO: null,
+  ADD_HUMAN: null,
 });
 
 export default actionTypes;

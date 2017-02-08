@@ -5,6 +5,7 @@ import { AppDispatcher } from "../flux/dispatcher";
 import ActionTypes from "../constants/ActionConstants";
 import * as React from "react";
 import {injectable, inject} from "inversify";
+import { isTodoAction } from "../types/TodoAction";
 
 type TodoStoreState = I.OrderedMap<number, Todo>;
 type TodoStoreStateType = TodoStoreState | null;
@@ -28,6 +29,9 @@ export class TodoStore extends Store {
     @inject(AppDispatcher) dispatcher: AppDispatcher) {
     super();
     dispatcher.register(payload => {
+      if (!isTodoAction(payload)) {
+        return;
+      }
       switch (payload.actionType) {
         case ActionTypes.ADD_TODO:
           if (this.todos) {

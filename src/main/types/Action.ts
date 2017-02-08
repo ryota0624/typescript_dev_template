@@ -1,3 +1,4 @@
 import { TodoAction } from "./todoAction";
+import { HumanAction } from "./HumanAction";
 
-export type ActionType = TodoAction;
+export type ActionType = TodoAction | HumanAction;
