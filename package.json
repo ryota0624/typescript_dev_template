@@ -12,19 +12,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/react": "^15.0.4",
-    "@types/react-dom": "^0.14.21",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "ts-loader": "^2.0.0",
-    "typescript": "^2.1.5",
-    "webpack": "^2.2.0"
+    "react-dom": "^15.4.2"
   },
   "devDependencies": {
+    "@types/react": "^15.0.4",
+    "@types/react-dom": "^0.14.21",
     "@types/enzyme": "^2.7.2",
     "ava": "^0.17.0",
     "enzyme": "^2.7.1",
-    "tslint-loader": "^3.3.0"
+    "tslint-loader": "^3.3.0",
+    "ts-loader": "^2.0.0",
+    "tslint": "^5.0.0",
+    "typescript": "^2.2.1",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.4.2"
   },
   "ava": {
     "files": [
