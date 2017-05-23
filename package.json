@@ -25,7 +25,9 @@
     "@types/enzyme": "^2.7.2",
     "ava": "^0.17.0",
     "enzyme": "^2.7.1",
-    "tslint-loader": "^3.3.0"
+    "tslint": "^5.2.0",
+    "tslint-loader": "^3.3.0",
+    "webpack-dev-server": "^2.4.5"
   },
   "ava": {
     "files": [

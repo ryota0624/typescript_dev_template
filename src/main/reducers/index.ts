@@ -11,6 +11,6 @@ const reducers = {
 
 export const reducer = combineReducers<typeof reducers>(reducers);
 
-const store =createStore(reducer);
+const store = createStore(reducer);
 
 const s = store.getState();

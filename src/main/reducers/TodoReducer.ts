@@ -35,3 +35,18 @@ export const todoReducer: Reducer<TodoState> = (state: TodoState, action: TodoAc
   }
   return state;
 };
+
+interface CaseReducer<MsgType, Msg extends Action<MsgType>, State> {
+  [key: string]: (msg: Msg, state: State) => State;
+}
+
+function caseReducer<MsgType, Msg extends Action<MsgType>, S>(mattcher: CaseReducer<MsgType, Msg, S>): (msg: Msg, state: S) => S {
+  return (msg, state) => mattcher[""](msg, state);
+}
+
+type TodoMsgType = typeof TodoAddActionType | typeof TodoRemoveActionType;
+
+caseReducer<TodoMsgType, TodoAction, TodoState>({
+  [TodoAddActionType]: (msg, state) => state,
+  [TodoRemoveActionType]: (msg, state) => state,
+});

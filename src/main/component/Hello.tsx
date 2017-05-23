@@ -8,5 +8,5 @@ export default class Hello extends React.Component<{ str: string }, {}> {
     return (
       <div>{this.props.str}</div>
     );
-  };
+  }
 }
