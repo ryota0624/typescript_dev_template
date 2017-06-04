@@ -20,9 +20,35 @@ export class Topic implements Entity<TopicID> {
     public followed: boolean
   ) {}
 
-  static factory({id, title, createdUserId, describe, imageUrl}: EntityObject<Topic>): ValidationResult<Readonly<Topic>> {
-    const topic = new Topic(id, title, createdUserId, describe, imageUrl, false);
+  static factory({id, title, createdUserId, describe, imageUrl, followed}: EntityObject<Topic>): ValidationResult<Readonly<Topic>> {
+    const topic = new Topic(id, title, createdUserId, describe, imageUrl, followed);
     return Validation.doCall(topic, new ValidationTopicDescribe(), new ValidationTopicTitle());
+  }
+}
+
+function updateTopicFollowStatus(followStatus: boolean) {
+  return (topicId: TopicID)  => (topic: Topic) => {
+    if (topic.id.equals(topicId)) {
+      const updatedTopic = Topic.factory({...topic, followed: followStatus});
+      if (updatedTopic instanceof Topic) {
+        return updatedTopic;
+      } else {
+        throw new Error(`invalid topic here ${topic}`)
+      }
+    }
+    return topic;
+  }
+}
+
+export function followTopic(topicId: TopicID) {
+  return (topic: Topic) => {
+    return updateTopicFollowStatus(true)(topicId)(topic);
+  }
+}
+
+export function unFollowTopic(topicId: TopicID) {
+  return (topic: Topic) => {
+    return updateTopicFollowStatus(false)(topicId)(topic);
   }
 }
 

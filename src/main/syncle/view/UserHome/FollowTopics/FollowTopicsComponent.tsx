@@ -1,15 +1,13 @@
 import * as React from "react";
 import {UseCase} from "../../../usecases/UseCase";
-import {FollowTopicsView, TopicDto} from "../../../reduxDataflow/reducers/followTopics";
+import {FollowTopicsView, TopicDto, FollowTopicsViewActions} from "../../../pageObjects/followTopics";
 
-export function FollowTopicsComponent(props: FollowTopicsView) {
-  const {topics, userId} = props;
+export function FollowTopicsComponent(props: FollowTopicsView & FollowTopicsViewActions) {
+  const {topics} = props;
   const topicsView = topics.map(topic => {
-    const action:TopicViewAction = {
-      onClickFollow: () => UseCase.execute({topicId: topic.id, userId: userId}, topic.followed ? props.action.userUnFollowTopic : props.action.userFollowTopic),
-    };
+    const followButtonHandler = topic.followed ? props.unFollowTopic : props.followTopic;
     return (
-      <TopicView key={topic.id} action={action} topic={topic}/>
+      <TopicView key={topic.id} topic={topic} onClickFollow={() => followButtonHandler(topic.id)}/>
     );
   });
   return (
@@ -21,13 +19,13 @@ export function FollowTopicsComponent(props: FollowTopicsView) {
 }
 
 type TopicViewAction = {onClickFollow: () => void}
-type TopicViewProps = { topic: TopicDto, action: TopicViewAction };
-function TopicView(props: TopicViewProps) {
+type TopicViewProps = { topic: TopicDto };
+function TopicView(props: TopicViewProps & TopicViewAction) {
   return (
     <div>
       <p>{props.topic.title}</p>
       <img src={props.topic.imageUrl}/>
-      <p onClick={props.action.onClickFollow}>{props.topic.followed ? "love" : "glay"}</p>
+      <p onClick={props.onClickFollow}>{props.topic.followed ? "love" : "glay"}</p>
     </div>);
 }
 

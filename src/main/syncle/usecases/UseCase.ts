@@ -3,9 +3,9 @@
  */
 import {EventEmitter} from 'events';
 export abstract class UseCase<I, O> {
-  protected onResultListener: ((result: O) => void)[];
-  protected onFailListener: ((err: Error) => void)[];
-  protected onStartListener: (() => void)[];
+  protected onResultListener: ((result: O) => void)[] = [];
+  protected onFailListener: ((err: Error) => void)[] = [];
+  protected onStartListener: (() => void)[] = [];
   static execute<I, O>(args: I, usecase: UseCase<I, O>) {
     usecase.emitStart();
     usecase.doCall(args)

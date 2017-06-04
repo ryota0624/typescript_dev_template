@@ -5,6 +5,11 @@ export class Value<T extends number|string|boolean> {
   get(): T {
     return this.value;
   }
+
+  equals(other: Value<T>) {
+    return other.value === this.value;
+  }
+
 }
 
 interface ValueObjectInterface<T> {

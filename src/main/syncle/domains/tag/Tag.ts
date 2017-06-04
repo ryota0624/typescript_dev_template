@@ -11,9 +11,10 @@ export class Tag implements Entity<TagName> {
     public id: TagName,
   ) {}
   static factory({id}: EntityObject<Tag>): Readonly<Tag> {
-    return new Tag(name);
+    return new Tag(id);
   }
-  get name(): string {
-    return this.id.value;
-  }
+}
+
+export function name(tag: Tag) {
+  return tag.id.value;
 }

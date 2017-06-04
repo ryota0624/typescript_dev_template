@@ -17,7 +17,7 @@ export class GetUserFollowTopics extends UseCase<UserFollowTopicArgs, Topic[]> {
     super();
   }
 
-  doCall({userId, topicId}: UserFollowTopicArgs) {
+  protected doCall({userId}: UserFollowTopicArgs) {
     return this.userRepository.findById(new UserID(userId))
       .then(user => this.topicRepository.findUserFollows(user.id))
   }

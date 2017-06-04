@@ -3,6 +3,7 @@ import {TopicRepository} from "../../domains/topic/TopicRepository";
 import {Topic, TopicID, TopicTitle, TopicDescribe, TopicImageUrl} from "../../domains/topic/Topic";
 import {UserRepositoryOnMem} from "./UserRepositoryOnMem";
 import {UserID} from "../../domains/user/User";
+import {TagName} from "../../domains/tag/Tag";
 /**
  * Created by ryota on 2017/06/03.
  */
@@ -19,9 +20,15 @@ let topicsMap: Map<number, Topic> = new Map(
   ]
 );
 
+let topicRelTag: [TopicID, TagName][] = [];
+
 export class TopicRepositoryOnMem extends Repository implements TopicRepository {
-  store(topic: Topic) {
+  static readonly topicRelTag = topicRelTag;
+  store(topic: Topic, tagIds: TagName[]) {
     topicsMap.set(topic.id.value, topic);
+    tagIds.forEach(tagId => {
+      topicRelTag.push([topic.id, tagId]);
+    });
     this.emitChange();
     return Promise.resolve();
   }
@@ -55,3 +62,5 @@ export class TopicRepositoryOnMem extends Repository implements TopicRepository 
     return Promise.all(topicPromises);
   }
 }
+
+export default new TopicRepositoryOnMem();

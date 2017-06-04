@@ -20,9 +20,9 @@ export abstract class Validation<E extends Entity<Value<number|string>>> {
     });
     const isFail = validationResults.some(result => result instanceof InvalidValidation);
     if (isFail) {
-      const validationResultReason = validationResults.reduce((invaliResonStrings, invalidValidation) => {
+      const validationResultReason = validationResults.reduce((invalidReasonStrings, invalidValidation) => {
         if (invalidValidation instanceof InvalidValidation) {
-          return `${invaliResonStrings}\n${invalidValidation.reason}`;
+          return `${invalidReasonStrings}\n${invalidValidation.reason}`;
         }
         return "";
       }, "");

@@ -43,3 +43,5 @@ export class UserRepositoryOnMem extends Repository implements UserRepository {
     return Promise.resolve(users);
   }
 }
+
+export default new UserRepositoryOnMem();

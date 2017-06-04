@@ -11,18 +11,19 @@ export interface UserFollowTopicArgs {
   topicId: number;
 }
 
-export class UserFollowTopic extends UseCase<UserFollowTopicArgs, void> {
+export class UserFollowTopic extends UseCase<UserFollowTopicArgs, TopicID> {
   constructor(private topicRepository: TopicRepository, private userRepository: UserRepository) {
     super();
   }
 
-  doCall({userId, topicId}: UserFollowTopicArgs) {
+  protected doCall({userId, topicId}: UserFollowTopicArgs) {
     return Promise.all(
       [
         this.topicRepository.findById(new TopicID(topicId)),
         this.userRepository.findById(new UserID(userId))
       ])
-      .then(([topic, user]) => this.userRepository.store(user, topic.id));
+      .then(([topic, user]) => this.userRepository.store(user, topic.id))
+      .then(() => new TopicID(topicId));
   }
 }
 
