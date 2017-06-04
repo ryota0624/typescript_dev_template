@@ -3,7 +3,8 @@ import * as React from "react";
 import Hello from "./component/Hello";
 import {Value, valueObject} from "./modelingSupport/ValueObject";
 import * as a from "./immutableSample";
-import {start} from './reducers/TodoReducer';
+import {start} from "./reducers/TodoReducer";
+import {App} from "./syncle/routing/index";
 
 start();
 a.start();
@@ -40,5 +41,5 @@ admin.hello();
 
 const app = document.getElementById("app");
 if (app !== null) {
-  ReactDOM.render(<Hello str={"Hello World"} />, app);
+  ReactDOM.render(<App str={"Hello World"} />, app);
 }

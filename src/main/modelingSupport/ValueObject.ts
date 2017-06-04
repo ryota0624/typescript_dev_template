@@ -1,5 +1,5 @@
 export class Value<T extends number|string|boolean> {
-  constructor(private value: T) {
+  constructor(public value: T) {
   }
 
   get(): T {
