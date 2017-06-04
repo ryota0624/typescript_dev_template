@@ -1,4 +1,3 @@
-import {FollowTopicsState} from "../reducers/followTopics/reducer";
 import { connect } from 'react-redux'
 import {FollowTopicsComponent} from "../syncle/view/UserHome/FollowTopics/FollowTopicsComponent";
 import {TopicDto} from "../syncle/pageObjects/followTopics";
@@ -13,6 +12,7 @@ import {UseCase} from "../syncle/usecases/UseCase";
 import {UserFollowTopic} from "../syncle/usecases/UserFollowTopic";
 import {UserUnFollowTopic} from "../syncle/usecases/UserUnFollowTopic";
 import * as React from "react";
+import {ApplicationState} from "../reducers/Application/Application";
 function topicModel2Dto({id, title, imageUrl, followed}: Topic): TopicDto {
   return {id: id.value, title: title.value, imageUrl: imageUrl.value, followed};
 }
@@ -25,11 +25,11 @@ interface mapStateToPropsCreatorArgs {
   userId: number;
 }
 function mapStateToPropsCreator({userId}: mapStateToPropsCreatorArgs) {
-  return (state: FollowTopicsState) => {
+  return (state: ApplicationState) => {
     return {
-      topics: state.topics.map(topicModel2Dto),
+      topics: state.followTopics.topics.map(topicModel2Dto),
       userId,
-      resource: state.resource
+      resource: state.followTopics.resource
     }
   }
 }

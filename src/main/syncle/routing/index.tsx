@@ -13,10 +13,14 @@ import {Store} from "redux";
 import {FollowTopicsState} from "../../reducers/followTopics/reducer";
 import {UserFollowTopic} from "../usecases/UserFollowTopic";
 import {UserUnFollowTopic} from "../usecases/UserUnFollowTopic";
+import {CreateTopicWidgetState} from "../../reducers/createTopicWidget/reducer";
+import {ApplicationState} from "../../reducers/Application/Application";
 const topicRepository = new TopicRepositoryOnMem();
 const userRepository = new UserRepositoryOnMem();
 
-export function app(store: Store<FollowTopicsState>) {
+
+
+export function app(store: Store<ApplicationState>) {
   const userFollowTopicUseCase = new UserFollowTopic(topicRepository, userRepository);
   const getUserFollowTopicsUseCase = new GetUserFollowTopics(topicRepository, userRepository);
   const userUnFollowTopicUseCase = new UserUnFollowTopic(topicRepository, userRepository);

@@ -1,10 +1,15 @@
 import * as ReactDOM from "react-dom";
 import * as React from "react";
 import {app} from "./syncle/routing/index";
-import {createStore} from "redux";
-import {reducer} from "./reducers/followTopics/reducer";
+import {createStore, combineReducers} from "redux";
+import * as FollowTopics from "./reducers/followTopics/reducer";
+import * as CreateTopicWidget from "./reducers/createTopicWidget/reducer";
+import {ApplicationState} from "./reducers/Application/Application";
 
-
+const reducer = combineReducers<ApplicationState>({
+  followTopics: FollowTopics.reducer,
+  createTopicWidget: CreateTopicWidget.reducer
+});
 
 function start() {
   const App = app(createStore(reducer));

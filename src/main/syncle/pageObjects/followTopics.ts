@@ -17,7 +17,7 @@ export interface FollowTopicsView extends PageObject {
   resource: Resource;
 }
 
-export interface FollowTopicsViewActions {
+export interface FollowTopicsViewEvents {
   unFollowTopic: (topicId: number) => void;
   getFollowTopics: () => void;
   followTopic: (topicId: number) => void;
