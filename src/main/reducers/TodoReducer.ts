@@ -48,14 +48,15 @@ function caseReducer<MsgType extends string, Msg extends Action<MsgType>, S>(mat
 type TodoMsgType = typeof TodoAddActionType | typeof TodoRemoveActionType;
 
 
-function matchWithDefault<ReturnType>(defaultState: ReturnType) {
+export function matchWithDefault<ReturnType>(defaultState: ReturnType) {
   return (...cases: OneCase<any, ReturnType>[]) => {
     return function (msg: any, state: ReturnType = defaultState): ReturnType {
       const oneCase = cases.find((kase) => msg instanceof kase.klass);
       if (oneCase) {
         return oneCase.fn(msg, state);
       } else {
-        throw new Error(`missing case ${msg}`);
+        //throw new Error(`missing case ${msg}`);
+        return state;
       }
     };
   };
@@ -79,7 +80,7 @@ interface OneCase<Klass, ReturnType> {
   klass: Klass;
 }
 
-function caseOf<Klass>(klassConstructor: new(...args: any[]) => Klass) {
+export function caseOf<Klass>(klassConstructor: new(...args: any[]) => Klass) {
   return <ReturnType>(fnction: (instance: Klass, state: ReturnType) => ReturnType) => {
     return {
       fn: fnction,
