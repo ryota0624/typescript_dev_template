@@ -63,7 +63,7 @@ export const reducer: Reducer<CreateTopicWidgetState> = (state: CreateTopicWidge
         case CreateTopicWidgetForm.TopicDescribe:
           return {...state, inputFormTopicDescribe: new TopicDescribe(action.text)};
         case CreateTopicWidgetForm.TopicImageUrl:
-          return {...state, inputFormTopicImageUrl: new TopicImageUrl(action.text)};
+          return {...state, inputFormImageUrl: new TopicImageUrl(action.text)};
         case CreateTopicWidgetForm.TagName:
           return {...state, inputFormTagName: new TagName(action.text)};
         default: {

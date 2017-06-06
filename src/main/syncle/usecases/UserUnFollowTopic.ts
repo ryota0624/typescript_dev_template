@@ -1,6 +1,6 @@
 import {UserID} from "../domains/user/User";
 import {UserRepository} from "../domains/user/UserRepository";
-import {TopicRepository} from "../domains/topic/TopicRepository";
+import {TopicReadRepository} from "../domains/topic/TopicRepository";
 import {TopicID} from "../domains/topic/Topic";
 import {UseCase} from "./UseCase";
 
@@ -13,7 +13,7 @@ export interface UserFollowTopicArgs {
 }
 
 export class UserUnFollowTopic extends UseCase<UserFollowTopicArgs, TopicID> {
-  constructor(private topicRepository: TopicRepository, private userRepository: UserRepository) {
+  constructor(private topicRepository: TopicReadRepository, private userRepository: UserRepository) {
     super();
   }
 

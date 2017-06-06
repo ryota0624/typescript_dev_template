@@ -12,7 +12,7 @@ let usersMap: Map<number, User> = new Map([
 let userFollowTopic: [number, number][] = [[10, 1]];
 
 export class UserRepositoryOnMem extends Repository implements UserRepository {
-  static readonly userFollowTopic = userFollowTopic;
+  static userFollowTopic = userFollowTopic;
 
   store(user: User, topicId?: TopicID) {
     if (topicId) {

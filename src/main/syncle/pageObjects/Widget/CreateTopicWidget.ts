@@ -3,6 +3,7 @@
  */
 import {PageObject} from "../PageObject";
 import {CreateTopicWidgetScene} from "../../../reducers/createTopicWidget/reducer";
+import {TopicDTO, CreateTopicArgs} from "../../usecases/CreateTopic";
 
 export interface SuggestTags extends PageObject {
   recentlySeeTags: string[];
@@ -33,5 +34,5 @@ export interface CreateTopicWidgetEvents {
   transitionToCreateWaiting: () => void;
 
   selectTag: (tagName: string) => void;
-  createTopic: () => void;
+  createTopic: (view: CreateTopicWidgetView) => void;
 }

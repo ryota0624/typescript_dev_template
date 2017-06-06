@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import {FollowTopicsComponent} from "../syncle/view/UserHome/FollowTopics/FollowTopicsComponent";
-import {TopicDto} from "../syncle/pageObjects/followTopics";
+import {TopicDto, FollowTopicsView, FollowTopicsViewEvents} from "../syncle/pageObjects/followTopics";
 import {Topic} from "../syncle/domains/topic/Topic";
 import {Dispatch} from "redux";
 import {
@@ -13,6 +13,7 @@ import {UserFollowTopic} from "../syncle/usecases/UserFollowTopic";
 import {UserUnFollowTopic} from "../syncle/usecases/UserUnFollowTopic";
 import * as React from "react";
 import {ApplicationState} from "../reducers/Application/Application";
+import {TopicReadRepository} from "../syncle/domains/topic/TopicRepository";
 function topicModel2Dto({id, title, imageUrl, followed}: Topic): TopicDto {
   return {id: id.value, title: title.value, imageUrl: imageUrl.value, followed};
 }
@@ -38,11 +39,13 @@ interface injectDispatchArgs {
   userFollowTopicUseCase: UserFollowTopic
   getUserFollowTopicsUseCase: GetUserFollowTopics;
   userUnFollowTopicUseCase: UserUnFollowTopic;
+  topicRepository: TopicReadRepository;
   userId: number
 }
 function injectDispatchCreator({
   getUserFollowTopicsUseCase,
   userId,
+  topicRepository,
   userFollowTopicUseCase,
   userUnFollowTopicUseCase}: injectDispatchArgs) {
   return (dispatch: Dispatch<FollowTopicsAction>) => {
@@ -50,14 +53,17 @@ function injectDispatchCreator({
     const startStoreFollowTopics = startStoreFollowTopicsCreator(dispatch);
     const userFollowTopic = followTopicCreator(dispatch);
     const userUnFollowTopic = unFollowTopicCreator(dispatch);
+    topicRepository.subscribe(() => {
+      getFollowTopics();
+    });
 
-    function getFollowTopics() {
+    const getFollowTopics = (() => {
       getUserFollowTopicsUseCase.onStart(startStoreFollowTopics);
       getUserFollowTopicsUseCase.onResult(storeFollowTopics);
       return () => {
         UseCase.execute({userId}, getUserFollowTopicsUseCase)
       }
-    }
+    })();
 
     function followTopic() {
       userFollowTopicUseCase.onResult(userFollowTopic);
@@ -80,7 +86,7 @@ function injectDispatchCreator({
     }
 
     return {
-      getFollowTopics: getFollowTopics(),
+      getFollowTopics: getFollowTopics,
       followTopic: followTopic(),
       unFollowTopic: unFollowTopic()
     }
@@ -93,8 +99,14 @@ class Container extends React.Component<any, any> {
   }
 }
 
-export default ({ getUserFollowTopicsUseCase, userId, userFollowTopicUseCase, userUnFollowTopicUseCase }: mapStateToPropsCreatorArgs & injectDispatchArgs) =>
+export default ({ getUserFollowTopicsUseCase, userId, userFollowTopicUseCase, userUnFollowTopicUseCase, topicRepository }: mapStateToPropsCreatorArgs & injectDispatchArgs) =>
   connect(
     mapStateToPropsCreator({userId}),
-    injectDispatchCreator({getUserFollowTopicsUseCase, userFollowTopicUseCase, userUnFollowTopicUseCase, userId})
+    injectDispatchCreator({getUserFollowTopicsUseCase, userFollowTopicUseCase, userUnFollowTopicUseCase, topicRepository, userId}),
+    (pageObject: FollowTopicsView, events: FollowTopicsViewEvents) => {
+      return {
+        ...pageObject,
+        ...events,
+      }
+    }
   )(Container);

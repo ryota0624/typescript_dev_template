@@ -1,6 +1,6 @@
 import {UserID} from "../domains/user/User";
 import {UserRepository} from "../domains/user/UserRepository";
-import {TopicRepository} from "../domains/topic/TopicRepository";
+import {TopicWriteRepository} from "../domains/topic/TopicRepository";
 import {TopicID, Topic, TopicTitle, TopicDescribe, TopicImageUrl} from "../domains/topic/Topic";
 import {UseCase} from "./UseCase";
 import {TagRepository} from "../domains/tag/TagRepository";
@@ -40,7 +40,7 @@ export interface CreateTopicArgs {
 
 
 export class CreateTopic extends UseCase<CreateTopicArgs, Topic> {
-  constructor(private topicRepository: TopicRepository,
+  constructor(private topicRepository: TopicWriteRepository,
               private tagRepository: TagRepository
   ) {
     super();
