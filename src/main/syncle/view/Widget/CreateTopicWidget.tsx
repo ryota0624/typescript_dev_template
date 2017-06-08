@@ -17,7 +17,6 @@ export function CreateTopicWidgetComponent(props: CreateTopicWidgetView & Create
   const {sendInputTopicDescribe, sendInputTopicTitle, sendInputFormImageUrl, sendInputFormTagName} = props;
   const {selectTag, selectedTagNames, createTopic} = props;
   const {inputFormTopicTitle, inputFormTopicDescribe, inputFormTagName, inputFormImageUrl} = props;
-  console.log(props)
   return (
     <div>
       title<input value={inputFormTopicTitle} onChange={inputText(sendInputTopicTitle)}/>

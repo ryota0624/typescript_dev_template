@@ -1,7 +1,7 @@
 import {ApplicationState} from "../reducers/Application/Application";
 import {CreateTopicWidgetView, CreateTopicWidgetEvents} from "../syncle/pageObjects/Widget/CreateTopicWidget";
 import {name, TagName, Tag, LoveLevel} from "../syncle/domains/tag/Tag";
-import {CreateTopic, CreateTopicArgs, TopicDTO} from "../syncle/usecases/CreateTopic";
+import {CreateTopic, CreateTopicArgs, TopicDTO} from "../syncle/usecases/CreateTopicUseCase";
 import {Dispatch, connect} from "react-redux";
 import {
   CreateTopicWidgetAction, inputFormCreator, transitionToScene,

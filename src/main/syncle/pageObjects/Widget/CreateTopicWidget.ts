@@ -3,7 +3,6 @@
  */
 import {PageObject} from "../PageObject";
 import {CreateTopicWidgetScene} from "../../../reducers/createTopicWidget/reducer";
-import {TopicDTO, CreateTopicArgs} from "../../usecases/CreateTopic";
 
 export interface SuggestTags extends PageObject {
   recentlySeeTags: string[];

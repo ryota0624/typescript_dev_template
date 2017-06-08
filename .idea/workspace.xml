@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="536ea294-0d31-4c13-b39b-976195c83645" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/container/CreatedTopicsContainer.tsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/reducers/createdTopics/actionTypes.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/reducers/createdTopics/reducer.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/syncle/pageObjects/createdTopics.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/syncle/routing/routes.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/syncle/usecases/GetUserCreatedTopicUseCase.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/syncle/view/UserHome/CreatedTopics/CreatedTopicsComponent.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/syncle/usecases/CreateTopic.ts" afterPath="$PROJECT_DIR$/src/main/syncle/usecases/CreateTopicUseCase.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/syncle/usecases/GetUserFollowTopics.ts" afterPath="$PROJECT_DIR$/src/main/syncle/usecases/GetUserFollowTopicsUseCase.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/syncle/usecases/UserFollowTopic.ts" afterPath="$PROJECT_DIR$/src/main/syncle/usecases/UserFollowTopicUseCase.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/syncle/usecases/UserUnFollowTopic.ts" afterPath="$PROJECT_DIR$/src/main/syncle/usecases/UserUnFollowTopicUseCase.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/app.tsx" afterPath="$PROJECT_DIR$/src/main/app.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/container/CreateTopicWidgetContainer.tsx" afterPath="$PROJECT_DIR$/src/main/container/CreateTopicWidgetContainer.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/syncle/adaptors/Memory/TagRepositoryOnMem.ts" afterPath="$PROJECT_DIR$/src/main/syncle/adaptors/Memory/TagRepositoryOnMem.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/container/FollowTopicsContainer.tsx" afterPath="$PROJECT_DIR$/src/main/container/FollowTopicsContainer.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/reducers/Application/Application.ts" afterPath="$PROJECT_DIR$/src/main/reducers/Application/Application.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/syncle/adaptors/Memory/TopicRepositoryOnMem.ts" afterPath="$PROJECT_DIR$/src/main/syncle/adaptors/Memory/TopicRepositoryOnMem.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/syncle/domains/tag/Tag.ts" afterPath="$PROJECT_DIR$/src/main/syncle/domains/tag/Tag.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/syncle/domains/topic/Topic.ts" afterPath="$PROJECT_DIR$/src/main/syncle/domains/topic/Topic.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/syncle/usecases/CreateTopic.ts" afterPath="$PROJECT_DIR$/src/main/syncle/usecases/CreateTopic.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/syncle/pageObjects/Widget/CreateTopicWidget.ts" afterPath="$PROJECT_DIR$/src/main/syncle/pageObjects/Widget/CreateTopicWidget.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/syncle/routing/index.tsx" afterPath="$PROJECT_DIR$/src/main/syncle/routing/index.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/syncle/view/UserHome/FollowTopics/FollowTopicsComponent.tsx" afterPath="$PROJECT_DIR$/src/main/syncle/view/UserHome/FollowTopics/FollowTopicsComponent.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/syncle/view/Widget/CreateTopicWidget.tsx" afterPath="$PROJECT_DIR$/src/main/syncle/view/Widget/CreateTopicWidget.tsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,18 +39,62 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5820056">
+    <splitter split-orientation="horizontal" split-proportion="0.61100197">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="CreateTopicWidgetContainer.tsx" pinned="false" current-in-tab="true">
+          <file leaf-file-name="CreateTopicWidgetContainer.tsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/container/CreateTopicWidgetContainer.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="825">
-                  <caret line="57" column="11" lean-forward="true" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
+                <state relative-caret-position="-505">
+                  <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#69#0" expanded="true" />
-                    <element signature="n#!!doc;n#mapStateToPropsCreatorArgs#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CreatedTopicsComponent.tsx" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/syncle/view/UserHome/CreatedTopics/CreatedTopicsComponent.tsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                    <element signature="e#44#75#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app.tsx" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/app.tsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+                  <folding>
+                    <element signature="e#0#38#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Application.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/syncle/Application.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="stateHalper.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/syncle/stateHalper.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="105">
+                  <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -44,95 +102,57 @@
           <file leaf-file-name="CreateTopicWidget.tsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/syncle/view/Widget/CreateTopicWidget.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#43#74#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TopicRepository.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/syncle/domains/topic/TopicRepository.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-                  <folding>
-                    <element signature="n#!!doc;n#TopicReadRepository#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UserFollowTopic.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/UserFollowTopic.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-                  <folding>
-                    <element signature="e#0#44#0" expanded="true" />
-                    <element signature="n#!!doc;n#UserFollowTopicArgs#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UserUnFollowTopic.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/UserUnFollowTopic.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-                  <folding>
-                    <element signature="e#0#44#0" expanded="true" />
-                    <element signature="n#!!doc;n#UserFollowTopicArgs#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TagRepositoryOnMem.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/syncle/adaptors/Memory/TagRepositoryOnMem.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="40" column="34" lean-forward="false" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#339#381#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Tag.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/syncle/domains/tag/Tag.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+                <state relative-caret-position="195">
+                  <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TopicRepositoryOnMem.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/syncle/adaptors/Memory/TopicRepositoryOnMem.ts">
+          <file leaf-file-name="reducer.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/reducers/createdTopics/reducer.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="64" lean-forward="false" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+                <state relative-caret-position="215">
+                  <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
                   <folding>
-                    <element signature="e#402#444#0" expanded="false" />
+                    <element signature="e#0#55#0" expanded="true" />
+                    <element signature="e#216#258#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="UserRepositoryOnMem.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/syncle/adaptors/Memory/UserRepositoryOnMem.ts">
+          <file leaf-file-name="CreatedTopicsContainer.tsx" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/container/CreatedTopicsContainer.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="24" />
+                <state relative-caret-position="315">
+                  <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
                   <folding>
-                    <element signature="e#234#276#0" expanded="false" />
+                    <element signature="e#0#46#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="actionTypes.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/reducers/createdTopics/actionTypes.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#90#132#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/syncle/routing/index.tsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="241">
+                  <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+                  <folding>
+                    <element signature="e#43#74#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -142,120 +162,13 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Topic.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/syncle/domains/topic/Topic.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#99#0" expanded="true" />
-                    <element signature="n#!!doc;n#TopicID#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.tsx" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/syncle/routing/index.tsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FollowTopicsContainer.tsx" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/container/FollowTopicsContainer.tsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="645">
-                  <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#37#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="actionTypes.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/reducers/createTopicWidget/actionTypes.ts">
+          <file leaf-file-name="UserFollowTopicUseCase.ts" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/UserFollowTopicUseCase.ts">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="285">
-                  <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+                  <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
                   <folding>
-                    <element signature="e#0#45#0" expanded="true" />
-                    <element signature="e#169#211#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CreateTopicWidget.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/syncle/pageObjects/Widget/CreateTopicWidget.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#43#84#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TodoReducer.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/reducers/TodoReducer.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1215">
-                  <caret line="82" column="16" lean-forward="false" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#0#43#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="reducer.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/reducers/followTopics/reducer.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="actionTypes.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/reducers/followTopics/actionTypes.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#33#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CreateTopic.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/CreateTopic.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="95">
-                  <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
-                  <folding>
-                    <element signature="e#0#44#0" expanded="true" />
-                    <element signature="n#!!doc;n#randomInt#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GetUserFollowTopics.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/GetUserFollowTopics.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#43#87#0" expanded="true" />
+                    <element signature="n#!!doc;n#UserFollowTopicArgs#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -296,17 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/syncle/view/UserHome/FollowTopics/followTopicsComponent" />
-        <option value="$PROJECT_DIR$/src/main/syncle/view/UserHome/FollowTopics/FollowTopicsComponent" />
-        <option value="$PROJECT_DIR$/src/main/syncle/domains/tag/TopicRepository.ts" />
-        <option value="$PROJECT_DIR$/src/main/syncle/Application.ts" />
-        <option value="$PROJECT_DIR$/src/main/syncle/routing/index.ts" />
-        <option value="$PROJECT_DIR$/src/main/syncle/adaptors/UserRepositoryOnMem.ts" />
-        <option value="$PROJECT_DIR$/src/main/syncle/adaptors/TopicRepositoryOnMem.ts" />
-        <option value="$PROJECT_DIR$/src/main/syncle/domains/Repository.ts" />
-        <option value="$PROJECT_DIR$/src/main/syncle/reduxDataflow/stateHelpers/resouceState.ts" />
-        <option value="$PROJECT_DIR$/src/main/reducers/TodoReducer.ts" />
-        <option value="$PROJECT_DIR$/src/main/syncle/pageObjects/FollowTopicsPage.ts" />
         <option value="$PROJECT_DIR$/src/main/syncle/reduxDataflow/container/followTopicsContainer.tsx" />
         <option value="$PROJECT_DIR$/src/main/syncle/reduxDataflow/stateHalper.ts" />
         <option value="$PROJECT_DIR$/src/main/syncle/pageObjects/PageObject.ts" />
@@ -324,29 +226,40 @@
         <option value="$PROJECT_DIR$/src/main/syncle/domains/tag/TagRepository.ts" />
         <option value="$PROJECT_DIR$/src/main/container/CreateTopicWidgetContainer.ts" />
         <option value="$PROJECT_DIR$/src/main/reducers/common.ts" />
-        <option value="$PROJECT_DIR$/src/main/reducers/Application/Application.ts" />
-        <option value="$PROJECT_DIR$/src/main/app.tsx" />
         <option value="$PROJECT_DIR$/src/main/syncle/pageObjects/followTopics.ts" />
-        <option value="$PROJECT_DIR$/src/main/syncle/view/UserHome/FollowTopics/FollowTopicsComponent.tsx" />
         <option value="$PROJECT_DIR$/src/main/reducers/createTopicWidget/actionTypes.ts" />
         <option value="$PROJECT_DIR$/src/main/syncle/view/Widget/CreateTopicWidget.ts" />
         <option value="$PROJECT_DIR$/src/main/reducers/createTopicWidget/reducer.ts" />
-        <option value="$PROJECT_DIR$/src/main/syncle/pageObjects/Widget/CreateTopicWidget.ts" />
-        <option value="$PROJECT_DIR$/src/main/syncle/routing/index.tsx" />
         <option value="$PROJECT_DIR$/src/main/reducers/followTopics/actionTypes.ts" />
         <option value="$PROJECT_DIR$/src/main/syncle/adaptors/Memory/UserRepositoryOnMem.ts" />
         <option value="$PROJECT_DIR$/src/main/syncle/domains/topic/TopicRepository.ts" />
         <option value="$PROJECT_DIR$/src/main/syncle/usecases/GetUserFollowTopics.ts" />
         <option value="$PROJECT_DIR$/src/main/syncle/usecases/UserFollowTopic.ts" />
         <option value="$PROJECT_DIR$/src/main/syncle/usecases/UserUnFollowTopic.ts" />
-        <option value="$PROJECT_DIR$/src/main/container/FollowTopicsContainer.tsx" />
-        <option value="$PROJECT_DIR$/src/main/syncle/view/Widget/CreateTopicWidget.tsx" />
         <option value="$PROJECT_DIR$/src/main/syncle/domains/topic/Topic.ts" />
-        <option value="$PROJECT_DIR$/src/main/syncle/adaptors/Memory/TopicRepositoryOnMem.ts" />
         <option value="$PROJECT_DIR$/src/main/syncle/domains/tag/Tag.ts" />
         <option value="$PROJECT_DIR$/src/main/syncle/adaptors/Memory/TagRepositoryOnMem.ts" />
         <option value="$PROJECT_DIR$/src/main/syncle/usecases/CreateTopic.ts" />
+        <option value="$PROJECT_DIR$/src/main/syncle/routing/routes.ts" />
+        <option value="$PROJECT_DIR$/src/main/syncle/usecases/GetUserCreatedTopicUseCase.ts" />
         <option value="$PROJECT_DIR$/src/main/container/CreateTopicWidgetContainer.tsx" />
+        <option value="$PROJECT_DIR$/src/main/syncle/usecases/UserFollowTopicUseCase.ts" />
+        <option value="$PROJECT_DIR$/src/main/syncle/pageObjects/createdTopics.ts" />
+        <option value="$PROJECT_DIR$/src/main/syncle/usecases/UserUnFollowTopicUseCase.ts" />
+        <option value="$PROJECT_DIR$/src/main/container/FollowTopicsContainer.tsx" />
+        <option value="$PROJECT_DIR$/src/main/syncle/view/UserHome/CreatedTopics/CreatedTopicsComponent.ts" />
+        <option value="$PROJECT_DIR$/src/main/container/CreatedTopicsContainer.ts" />
+        <option value="$PROJECT_DIR$/src/main/syncle/pageObjects/Widget/CreateTopicWidget.ts" />
+        <option value="$PROJECT_DIR$/src/main/syncle/adaptors/Memory/TopicRepositoryOnMem.ts" />
+        <option value="$PROJECT_DIR$/src/main/reducers/Application/Application.ts" />
+        <option value="$PROJECT_DIR$/src/main/app.tsx" />
+        <option value="$PROJECT_DIR$/src/main/syncle/view/Widget/CreateTopicWidget.tsx" />
+        <option value="$PROJECT_DIR$/src/main/syncle/view/UserHome/FollowTopics/FollowTopicsComponent.tsx" />
+        <option value="$PROJECT_DIR$/src/main/reducers/createdTopics/actionTypes.ts" />
+        <option value="$PROJECT_DIR$/src/main/syncle/routing/index.tsx" />
+        <option value="$PROJECT_DIR$/src/main/reducers/createdTopics/reducer.ts" />
+        <option value="$PROJECT_DIR$/src/main/syncle/view/UserHome/CreatedTopics/CreatedTopicsComponent.tsx" />
+        <option value="$PROJECT_DIR$/src/main/container/CreatedTopicsContainer.tsx" />
       </list>
     </option>
   </component>
@@ -362,9 +275,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-131" />
+    <option name="x" value="583" />
     <option name="y" value="23" />
-    <option name="width" value="1305" />
+    <option name="width" value="839" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectView">
@@ -382,6 +295,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -470,14 +385,98 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routing" />
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="typescript_dev_template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="typescript_dev_template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syncle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserHome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="typescript_dev_template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="typescript_dev_template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syncle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserHome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CreatedTopics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="typescript_dev_template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="typescript_dev_template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="container" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -585,35 +584,36 @@
       <workItem from="1496541641391" duration="3937000" />
       <workItem from="1496546041370" duration="23656000" />
       <workItem from="1496672638109" duration="9091000" />
-      <workItem from="1496765662985" duration="788000" />
+      <workItem from="1496765662985" duration="7516000" />
+      <workItem from="1496939946254" duration="3423000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92718000" />
+    <option name="totallyTimeSpent" value="102869000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-131" y="23" width="1305" height="873" extended-state="0" />
+    <frame x="583" y="23" width="839" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16900311" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14425428" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20870678" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -624,49 +624,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/domains/services/userFollowTopic.ts" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/domains/user/User.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/node/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="596" column="83" lean-forward="false" selection-start-line="596" selection-start-column="83" selection-end-line="596" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/component/Hello.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/pageObjects/FollowTopicsPage.ts" />
-    <entry file="file://$PROJECT_DIR$/src/main/pattern.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/reduxDataflow/container/followTopicsContainer.tsx" />
     <entry file="file://$PROJECT_DIR$/src/main/modelingSupport/ValueObject.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="31">
@@ -686,28 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/stateHalper.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/Application.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/UseCase.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -740,13 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/app.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/react-redux/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -768,44 +701,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/reducers/Application/Application.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/reducers/AccountReducer.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="5" column="45" lean-forward="false" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/reducers/createTopicWidget/reducer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="58" column="19" lean-forward="true" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-          <folding>
-            <element signature="e#43#101#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/pageObjects/PageObject.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/pageObjects/followTopics.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="46" lean-forward="true" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -816,90 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/reducers/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="60" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="2" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/pageObjects/Widget/CreateTopicWidget.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#43#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/reducers/followTopics/reducer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/reducers/TodoReducer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="82" column="16" lean-forward="false" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/view/UserHome/FollowTopics/FollowTopicsComponent.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="86" lean-forward="false" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/adaptors/Memory/UserRepositoryOnMem.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="e#234#276#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/UserFollowTopic.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-            <element signature="n#!!doc;n#UserFollowTopicArgs#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/GetUserFollowTopics.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#43#87#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/UserUnFollowTopic.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-            <element signature="n#!!doc;n#UserFollowTopicArgs#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -907,44 +722,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/view/Widget/CreateTopicWidget.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#43#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/container/FollowTopicsContainer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/syncle/domains/topic/TopicRepository.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc;n#TopicReadRepository#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/adaptors/Memory/TopicRepositoryOnMem.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="64" lean-forward="false" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-          <folding>
-            <element signature="e#402#444#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -973,49 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/CreateTopic.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-            <element signature="n#!!doc;n#randomInt#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/reducers/followTopics/actionTypes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/container/CreateTopicWidgetContainer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="57" column="11" lean-forward="true" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
-            <element signature="n#!!doc;n#mapStateToPropsCreatorArgs#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/reducers/createTopicWidget/actionTypes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-            <element signature="e#169#211#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/syncle/domains/topic/Topic.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1027,11 +765,313 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/GetUserFollowTopicsUseCase.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding>
+            <element signature="e#43#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/reducers/createTopicWidget/reducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="46" column="10" lean-forward="false" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/reducers/followTopics/reducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/reducers/TodoReducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/reducers/followTopics/actionTypes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-70">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#33#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/reducers/createTopicWidget/actionTypes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+            <element signature="e#169#211#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/CreateTopicUseCase.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+            <element signature="n#!!doc;n#randomInt#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/UserUnFollowTopicUseCase.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc;n#UserFollowTopicArgs#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/GetUserCreatedTopicUseCase.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc;n#GetUserCreatedTopicUseCaseArgs#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/pageObjects/Widget/CreateTopicWidget.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#43#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/pageObjects/createdTopics.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <element signature="n#!!doc;n#TopicDto#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/pageObjects/followTopics.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/pageObjects/PageObject.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/component/Hello.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/UseCase.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/adaptors/Memory/TopicRepositoryOnMem.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#402#444#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/adaptors/Memory/UserRepositoryOnMem.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#234#276#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/reducers/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="60" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="2" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/reducers/Application/Application.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/routing/routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/view/UserHome/FollowTopics/FollowTopicsComponent.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/container/FollowTopicsContainer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/usecases/UserFollowTopicUseCase.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc;n#UserFollowTopicArgs#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/reducers/createdTopics/actionTypes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="e#90#132#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/view/Widget/CreateTopicWidget.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/Application.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/stateHalper.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/app.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/syncle/routing/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="241">
+          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <folding>
+            <element signature="e#43#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/reducers/createdTopics/reducer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+            <element signature="e#216#258#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/syncle/view/UserHome/CreatedTopics/CreatedTopicsComponent.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#44#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/container/CreateTopicWidgetContainer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-505">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/container/CreatedTopicsContainer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

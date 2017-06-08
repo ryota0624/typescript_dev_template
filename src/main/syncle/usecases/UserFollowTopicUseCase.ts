@@ -11,7 +11,7 @@ export interface UserFollowTopicArgs {
   topicId: number;
 }
 
-export class UserFollowTopic extends UseCase<UserFollowTopicArgs, TopicID> {
+export class UserFollowTopicUseCase extends UseCase<UserFollowTopicArgs, TopicID> {
   constructor(private topicRepository: TopicReadRepository, private userRepository: UserRepository) {
     super();
   }
@@ -25,8 +25,4 @@ export class UserFollowTopic extends UseCase<UserFollowTopicArgs, TopicID> {
       .then(([topic, user]) => this.userRepository.store(user, topic.id))
       .then(() => new TopicID(topicId));
   }
-}
-
-export interface UseUserFollowTopic {
-  userFollowTopic: UserFollowTopic;
 }

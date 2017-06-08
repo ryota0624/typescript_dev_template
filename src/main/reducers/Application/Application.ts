@@ -3,7 +3,9 @@
  */
 import {CreateTopicWidgetState} from "../createTopicWidget/reducer";
 import {FollowTopicsState} from "../followTopics/reducer";
+import {CreatedTopicsState} from "../createdTopics/reducer";
 export type ApplicationState = {
   followTopics: FollowTopicsState;
-  createTopicWidget: CreateTopicWidgetState
+  createTopicWidget: CreateTopicWidgetState;
+  createdTopics: CreatedTopicsState
 }

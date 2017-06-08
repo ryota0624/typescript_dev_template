@@ -1,8 +1,11 @@
 import * as React from "react";
-import {UseCase} from "../../../usecases/UseCase";
 import {FollowTopicsView, TopicDto, FollowTopicsViewEvents} from "../../../pageObjects/followTopics";
+import {Resource} from "../../../stateHalper";
 
 export function FollowTopicsComponent(props: FollowTopicsView & FollowTopicsViewEvents) {
+  if (props.resource !== Resource.Fulfill) {
+    return <div>loading</div>
+  }
   const {topics} = props;
   const topicsView = topics.map(topic => {
     const followButtonHandler = topic.followed ? props.unFollowTopic : props.followTopic;

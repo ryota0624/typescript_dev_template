@@ -15,6 +15,14 @@ let topicsMap: Map<number, Topic> = new Map(
       createdUserId: new UserID(100),
       describe: new TopicDescribe("sample\nsamle"),
       imageUrl: new TopicImageUrl("http://the-rich-secret.com/wp-content/uploads/2014/07/kinnun-gazou.png"),
+      followed: true,
+    }) as Topic],
+    [2 ,Topic.factory({
+      id: new TopicID(2),
+      title: new TopicTitle("sample2"),
+      createdUserId: new UserID(10),
+      describe: new TopicDescribe("sample\nsamle"),
+      imageUrl: new TopicImageUrl("http://the-rich-secret.com/wp-content/uploads/2014/07/kinnun-gazou.png"),
       followed: false,
     }) as Topic]
   ]

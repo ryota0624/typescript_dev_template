@@ -7,10 +7,10 @@ import {
   FollowTopicsAction, storeFollowTopicsCreator,
   startStoreFollowTopicsCreator, followTopicCreator, unFollowTopicCreator
 } from "../reducers/followTopics/actionTypes";
-import {GetUserFollowTopics} from "../syncle/usecases/GetUserFollowTopics";
+import {GetUserFollowTopics} from "../syncle/usecases/GetUserFollowTopicsUseCase";
 import {UseCase} from "../syncle/usecases/UseCase";
-import {UserFollowTopic} from "../syncle/usecases/UserFollowTopic";
-import {UserUnFollowTopic} from "../syncle/usecases/UserUnFollowTopic";
+import {UserFollowTopicUseCase} from "../syncle/usecases/UserFollowTopicUseCase";
+import {UserUnFollowTopicUseCase} from "../syncle/usecases/UserUnFollowTopicUseCase";
 import * as React from "react";
 import {ApplicationState} from "../reducers/Application/Application";
 import {TopicReadRepository} from "../syncle/domains/topic/TopicRepository";
@@ -36,9 +36,9 @@ function mapStateToPropsCreator({userId}: mapStateToPropsCreatorArgs) {
 }
 
 interface injectDispatchArgs {
-  userFollowTopicUseCase: UserFollowTopic
+  userFollowTopicUseCase: UserFollowTopicUseCase
   getUserFollowTopicsUseCase: GetUserFollowTopics;
-  userUnFollowTopicUseCase: UserUnFollowTopic;
+  userUnFollowTopicUseCase: UserUnFollowTopicUseCase;
   topicRepository: TopicReadRepository;
   userId: number
 }
