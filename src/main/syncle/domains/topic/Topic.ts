@@ -17,7 +17,7 @@ export class Topic implements Entity<TopicID> {
     public createdUserId: UserID,
     public describe: TopicDescribe,
     public imageUrl: TopicImageUrl,
-    public followed: boolean
+    public followed: boolean,
   ) {}
 
   static factory({id, title, createdUserId, describe, imageUrl, followed}: EntityObject<Topic>): ValidationResult<Readonly<Topic>> {

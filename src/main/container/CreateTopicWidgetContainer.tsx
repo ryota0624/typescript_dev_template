@@ -1,6 +1,6 @@
 import {ApplicationState} from "../reducers/Application/Application";
 import {CreateTopicWidgetView, CreateTopicWidgetEvents} from "../syncle/pageObjects/Widget/CreateTopicWidget";
-import {name, TagName, Tag} from "../syncle/domains/tag/Tag";
+import {name, TagName, Tag, LoveLevel} from "../syncle/domains/tag/Tag";
 import {CreateTopic, CreateTopicArgs, TopicDTO} from "../syncle/usecases/CreateTopic";
 import {Dispatch, connect} from "react-redux";
 import {
@@ -88,7 +88,7 @@ function injectEvent({createTopicUseCase, userId, tagRepository}: InjectEventArg
       return (tagName: string) => {
         dispatch({
           type: SelectTag,
-          tag: Tag.factory({id: new TagName(tagName)})
+          tag: Tag.factory({id: new TagName(tagName), loveLevel: LoveLevel.Zero})
         });
         dispatch(inputFormCreator(CreateTopicWidgetForm.TagName)(""));
       };

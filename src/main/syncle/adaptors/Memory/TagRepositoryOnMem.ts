@@ -1,13 +1,15 @@
 import {TagRepository} from "../../domains/tag/TagRepository";
 import {Repository} from "../../domains/Repository";
-import {Tag, TagName} from "../../domains/tag/Tag";
+import {Tag, TagName, LoveLevel} from "../../domains/tag/Tag";
 import {TopicID} from "../../domains/topic/Topic";
 import {TopicRepositoryOnMem} from "./TopicRepositoryOnMem";
+import {UserID} from "../../domains/user/User";
 /**
  * Created by ryota on 2017/06/04.
  */
 
 let tagMaps: Map<string, Tag> = new Map();
+let userTagLoveLevel: [UserID, [TagName, LoveLevel]][] = [];
 export class TagRepositoryOnMem extends Repository implements TagRepository {
   store(tag: Tag): Promise<void> {
     tagMaps.set(tag.id.value, tag);
@@ -35,14 +37,14 @@ export class TagRepositoryOnMem extends Repository implements TagRepository {
   }
 
   findTopicTags(topic: TopicID) {
-    let tags: Tag[] = [];
-    TopicRepositoryOnMem.topicRelTag.forEach(([topicId, tagName]) => {
+    const tagsP = TopicRepositoryOnMem.topicRelTag.map(([topicId, tagName]) => {
       if (topicId.equals(topic)) {
-        tags.push(Tag.factory({id: tagName}))
+        return this.findById(tagName);
       }
-    });
+      return null;
+    }).filter(p => p instanceof Promise) as Promise<Tag>[];
 
-    return Promise.resolve(tags);
+    return Promise.all(tagsP);
   }
 }
 

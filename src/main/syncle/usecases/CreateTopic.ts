@@ -5,7 +5,7 @@ import {TopicID, Topic, TopicTitle, TopicDescribe, TopicImageUrl} from "../domai
 import {UseCase} from "./UseCase";
 import {TagRepository} from "../domains/tag/TagRepository";
 import {ValidationResult, InvalidValidation} from "../../modelingSupport/Entity";
-import {TagName, Tag} from "../domains/tag/Tag";
+import {TagName, Tag, LoveLevel} from "../domains/tag/Tag";
 /**
  * Created by ryota on 2017/06/03.
  */
@@ -29,7 +29,7 @@ function topicDto2Entity(createUserId: number, dto: TopicDTO): ValidationResult<
     createdUserId: new UserID(createUserId),
     describe: new TopicDescribe(dto.describe),
     imageUrl: new TopicImageUrl(dto.imageUrl),
-    followed: true
+    followed: true,
   })
 }
 export interface CreateTopicArgs {
@@ -56,7 +56,7 @@ export class CreateTopic extends UseCase<CreateTopicArgs, Topic> {
   }
 
   private createTag(tagName: string): Tag {
-    return Tag.factory({id: new TagName(tagName)})
+    return Tag.factory({id: new TagName(tagName), loveLevel: LoveLevel.One})
   }
 
   private createTopic(userId: number, topicDto: TopicDTO): Promise<Topic> {
